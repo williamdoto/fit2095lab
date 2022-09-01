@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="./css/boostrap.min.css" />
+    </head>
+    
+    <header>
+        <a style="font-family:verdana;" style="font-size:180%;" href="http://localhost:8080/">Home</a>
+    </header>
+
+    <style>
+        table, th, td {
+    border:1px solid black;
+  }
+    </style>
+    
+    <body>
+        <h3>The available parcels are:
+            <table class= "table table-hover table-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Sender</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Fragile</th>
+                    <th scope="col">Type</th>
+                </tr>
+                <% for ( let i =0; i< db.length;i++){ %>
+                    <tr>
+                        <td>
+                            <%= db[i].id %>
+                        </td>
+                        <td>
+                            <%= db[i].sender %>
+                        </td>
+                        <td>
+                            <%= db[i].address %>
+                        </td>
+                        <td>
+                            <%= db[i].weight %>
+                        </td>
+                        <td>
+                            <%= db[i].fragile %>
+                        </td>
+                        <td>
+                            <%= db[i].type %>
+                        </td>
+                    </tr>
+                    <% }%>
+         </table>
+        </h3>
+    </body>
+</html>

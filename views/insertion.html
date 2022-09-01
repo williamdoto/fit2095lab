@@ -1,0 +1,47 @@
+<html>
+    <link rel="stylesheet" href=styles.css>
+    <header>
+        <a style="font-family:verdana;"  href="http://localhost:8080/">Home</a>
+        <a style="font-family:verdana;" href="http://localhost:8080/addparcelhome">Add More Parcels</a>
+    </header>
+
+    <style>
+        table, th, td {
+    border:1px solid black;
+  }
+    </style>
+    <body>
+        
+        Insertion has been successful! The data you last inserted is: <br>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Sender</th>
+                <th>Address</th>
+                <th>Weight</th>
+                <th>Fragile</th>
+                <th>Type</th>
+            </tr>
+                <tr>
+                    <td>
+                        <%= input.id %>
+                    </td>
+                    <td>
+                        <%= input.sender %>
+                    </td>
+                    <td>
+                        <%= input.address %>
+                    </td>
+                    <td>
+                        <%= input.weight %>
+                    </td>
+                    <td>
+                        <%= input.fragile %>
+                    </td>
+                    <td>
+                        <%= input.type %>
+                    </td>
+                </tr>
+     </table>
+    </body>
+</html>
