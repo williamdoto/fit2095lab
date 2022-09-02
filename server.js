@@ -169,6 +169,28 @@ app.post('/delete2', function(req,res){
     })
 })
 
+app.get('/delete3home', function(req, res){
+    res.sendFile(path.join(__dirname, '/views/deletion3.html'))
+})
+
+app.post('/delete3', function(req,res){
+    Parcel.deleteMany({weight: parseInt(req.body.weight), fragile: req.body.fragile == "on" ? true : false}, function (err, obj) {
+        if(err){
+            res.sendFile(path.join(__dirname, '/views/invalid.html'))
+            console.log('Cant Update' + err)
+        }
+        else 
+        {console.log('Successfully saved');
+        Parcel.find({}, function(err,docs){
+            if(err){
+            console.log("Listing Error")}
+            else{
+            res.render('listparcel.html', {db: docs})}
+        })
+    }
+    })
+})
+
 app.get('/insertion', function(req,res){
     res.render('insertion.html', {input: db[-1]});
 })
