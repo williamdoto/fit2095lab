@@ -15,6 +15,8 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json())
 app.listen(9033)
 
+
+
 MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
     console.log("Deez");
     if (err) {

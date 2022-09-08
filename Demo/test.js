@@ -10,7 +10,7 @@ MongoClient.connect(url, {useNewUrlParser: true}, (err, client) => {
         console.log("Connected successfully to server");
         warehouse = client.db("warehouse");
         warehouse.collection("products")
-        // warehouse.collection('products').insertOne({name: "Robot", quantity: 2, cost: 219, origin: "Australia"});
+        warehouse.collection('products').insertOne({name: "Robot", quantity: 2, cost: 219, origin: "Australia"});
     }
 })
 
